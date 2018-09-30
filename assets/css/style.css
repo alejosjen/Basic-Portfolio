@@ -16,7 +16,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    max-width: 960px;
     overflow: scroll;
     padding-bottom: 61px;
 }
@@ -36,19 +35,21 @@ p {
 
 hr {
     height: 2px;
-    margin: 20px 0;
+    margin: 20px 16px;
     background-color: #ccc;
 }
 /* Header and Nav Wrapper */
 .left-right-wrapper {
     display: flex;
     flex-direction: row;
+
 }
 
 header {
     background-color: #fff;
     border-color: #ccc;
     margin-bottom: 10px;
+    width: 100vw;
 }
 
 .navbar {
@@ -58,7 +59,6 @@ header {
     justify-content: flex-end;
     margin-right: 50px;
     position: relative;
-    top: 18px;
 }
 
 .navbar ul li {
@@ -87,8 +87,10 @@ li a {
 #name-logo {
     background-color:  #4aaaa5;
     display: flex;
+    align-items: flex-start;
     padding: 10px 35px;
-    margin: 30px 0 0 50px;
+    margin-left: 50px;
+    margin-bottom: 0;
 }
 
 .portrait {
@@ -99,13 +101,14 @@ li a {
 
 .content-titles {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
-    padding: 5px;
+    margin: 16px;
 }
 .content-area {
     background-color: #ffffff;
     border-color: #dddddd;
+    max-width: 960px;
     margin: 0 50px;
-    padding: 20px;
+    overflow: scroll;
 }
 
 footer {
