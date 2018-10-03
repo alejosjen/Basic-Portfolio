@@ -1,10 +1,3 @@
-* {
-    border: 0;
-    box-sizing: content-box;
-    margin: 0;
-    padding: 0;
-}
-
 html, button {
     color: #777;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -25,11 +18,7 @@ h1, h2, .color-text-overlay {
     font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
-h1 {
-    margin: 10px;
-}
-
-h2 {
+.content-title {
     color: #4aaaa5;
     margin: 16px
 }
@@ -54,7 +43,7 @@ header {
     background-color: #fff;
     border-color: #ccc;
     margin-bottom: 30px;
-    width: 100vw;
+    width: 960px;
 }
 
 .navbar {
@@ -89,10 +78,10 @@ li a {
     text-decoration: none;
 }
 
-#name-logo {
+.name-logo {
     background-color:  #4aaaa5;
     display: flex;
-    padding: 10px 35px;
+    padding: 5px 35px;
     margin-left: 50px;
 }
 
