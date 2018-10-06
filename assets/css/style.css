@@ -7,21 +7,22 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
-    max-width: 960px;
-    overflow: scroll;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    overflow: auto;
     padding-bottom: 61px;
 }
 
 .banner {
-    background-color: #fff;
+    background: #fff;
     border-bottom: 1px solid #ccc;
     display: flex;
     height: 80px;
     position: absolute;
     left: 0;
     top: 0;
-    width: 100vw;
+    right: 0;
 }
 
 h1, h2, .color-text-overlay {
@@ -31,18 +32,18 @@ h1, h2, .color-text-overlay {
 
 .content-title {
     color: #4aaaa5;
-    margin: 16px
+    margin: 20px 0 11px 16px;
 }
 
 p {
-    padding: 0 1em;
+    padding: 0 1em 1em 1em;
     line-height: 1.5em;
     margin: 0;
 }
 
 hr {
     height: 1px;
-    margin: 20px 16px;
+    margin: 0 16px 16px 16px;
     background-color: #ccc;
 }
 
@@ -56,6 +57,7 @@ hr {
 header {
     background-color: #fff;
     border-color: #ccc;
+    height: 60px;
     margin-bottom: 30px;
     margin-top: 0;
     width: 960px;
@@ -65,9 +67,8 @@ header {
     align-items: center;
     display: flex;
     flex-grow: 1;
+    height: 80px;
     justify-content: flex-end;
-    margin-right: 50px;
-    overflow: scroll;
     position: relative;
 }
 
@@ -93,20 +94,36 @@ li a {
     color: #777;
     text-decoration: none;
 }
+li a:hover {
+    color: #777;
+    text-shadow: 0 1px 0 #ccc;
+}
+
+a {
+    color: #777;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
 
 .name-logo {
     background-color:  #4aaaa5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     position: relative;
     justify-content: center;
-    height: 80px;
+    align-items: center;
+    height: 87px;
     width: 270px;
-    margin-left: 50px;
 }
 
 .portrait {
     float: left;
-    margin: 0 16px; 
+    margin: 0 16px 10px 16px; 
     width: 240px;
     height: 160px;
 }
@@ -114,11 +131,18 @@ li a {
 .content-titles-area, .content-about, .content-portfolio, .content-form {
     background-color: #ffffff;
     border-color: #dddddd;
-    max-width: 960px;
-    margin: 0 50px;
-    overflow: scroll;
+    width: 960px;
 }
 
+.content-titles-area {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 10px;
+}
+.content-about, .content-portfolio, .content-contact {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 .content-portfolio, .content-form {
     display: flex;
     flex-wrap: wrap;
@@ -126,20 +150,38 @@ li a {
 
 .portfolio-images {
     position: relative;
-    width: 280px;
-    margin: 15px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.portfolio-image:last-child {
+    align-self: flex-start;
+}
+
+img {
+    border-radius: 10px;
+    border: 4px solid #4aaaa5;
+    margin-bottom: 10px;
 }
 
 .color-text-overlay {
     display: flex;
-    flex-wrap: wrap;
     position: absolute;
-    bottom: 30px;
+    bottom: 35px;
     background-color: #4aaaa5;
     width: 280px;
     height: 35px;
     align-items: center;
     justify-content: center;
+    letter-spacing: .1em;
+}
+
+.color-text-overlay:hover {
+    background-color: #4ac199;
 }
 
 form {
@@ -156,23 +198,30 @@ input[type=text] {
     display: inline-block;
     margin: 8px 0;
     padding: 12px 10px;
-   
 }
 
 input[type=submit] {
-    align-items: center;
     background-color:  #4aaaa5;
     color: #fff;
     font-size: 1em;
-    justify-content: flex-start;
     height: 35px;
     width: 88px;
+}
+
+input[type=submit]:hover {
+    background-color: #4ac199;
+}
+
+input[type=submit]:active {
+    background-color: rgba(74, 193, 153, .5);
 }
 
 input[id=message] {
     padding: 75px 0;
 }
-
+.fa-envelope:before {
+    margin: 0 3px;
+}
 footer {
     background-color: #666;
     border-top: 8px solid #4aaaa5;
@@ -181,7 +230,7 @@ footer {
     align-items: center;
     height: 40px;
     position: fixed;
-    width: 100vw;
     bottom: 0;
     left: 0;
+    right: 0;
 }
